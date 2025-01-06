@@ -21,57 +21,32 @@ Site dynamique pour une pizzeria, avec inscription, ajout de plats dans votre pa
 ## 🚀 Installation
 
 ### Prérequis
-- Liste des dépendances (Node.js, Python, etc.)
-- Instructions pour les installer.
-
-### Étapes d'installation
+-Installer python et django et pillow pip install django pip install pillow
 
 # Clonez le projet
-git clone https://github.com/utilisateur/projet.git
+git clone https://github.com/Hug0003/Pizzeria.git
 
 # Accédez au répertoire
-cd projet
-
-# Installez les dépendances
-npm install  # ou pip install -r requirements.txt
-
+dans le dossier pizzeria ( cd pizzeria)
 # Lancez le projet
-npm start  # ou python app.py
+python manage.py runserver
 
 
 ## 📚 Usage
-
-Expliquez comment utiliser le projet après installation.  
-Inclure des exemples de commandes ou captures d’écran.
-
-
+se créer un compte reserver des plats du restaurants découvrir la DA du site 
 
 ## 👥 Contributeurs
-
 - moi : - moi : [@monprofil](https://github.com/Hug0003)  
 
 ### Contribuer
 Les pull requests sont les bienvenues. Pour les changements majeurs, ouvrez une issue d'abord pour discuter de ce que vous souhaitez changer.  
 
-
-
-## ✅ Tests
-
-Instructions pour lancer les tests si le projet en contient :  
-
-
-# Lancer les tests
-npm test  # ou pytest
-
-
-
 ## 🛠️ Technologies Utilisées
 
-- Technologie 1  
-- Technologie 2  
-- Technologie 3  
-
-
+- python ( django )
+- HTML
+- CSS
+- sqlite
 
 ## 📬 Contact
 
@@ -79,3 +54,4 @@ Pour toute question, contactez-moi :
 - GitHub : [@monprofil](https://github.com/Hug0003)  
 - E-mail : hugomeuriel@gmail.com
 
+[@monprofil](https://github.com/Hug0003) /2022
