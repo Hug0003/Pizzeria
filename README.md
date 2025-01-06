@@ -21,7 +21,7 @@ Site dynamique pour une pizzeria, avec inscription, ajout de plats dans votre pa
 ## 🚀 Installation
 
 ### Prérequis
--Installer python et django et pillow pip install django pip install pillow
+-Installer python et django: pip install django
 
 # Clonez le projet
 git clone https://github.com/Hug0003/Pizzeria.git
