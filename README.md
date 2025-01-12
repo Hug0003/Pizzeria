@@ -2,6 +2,7 @@
 
 ## 📄 Description
 Site dynamique pour une pizzeria, avec inscription, ajout de plats dans votre panier possibilité de les supprimer, contacter la pizzeria
+Panel admin pour ajouter supprimer user et plats
 
 
 ## 🎥 Démo Visuelle
@@ -15,7 +16,8 @@ Site dynamique pour une pizzeria, avec inscription, ajout de plats dans votre pa
 
 - [x] connection, inscription et déconnection  
 - [x] ajout de différents plats, boisson, dessert dans votre panier, avec possibilité de supprimer vos choix 
-- [x] contacter la pizzeria  
+- [x] contacter la pizzeria
+- [x] Panel admin 
 
 
 ## 🚀 Installation
