@@ -15,7 +15,10 @@
     <a href="{% url 'index' %}"><img id="small_logo" src="{% static 'resto/images/small_logo.png' %}"></a>
 
 <div class="cart">
-    <p class="sup"><a class="sup" href="{% url 'delete-cart' %}"> Supprimer le panier</a></p>
+    <form class="sup" method="post" action="{% url 'delete-cart' %}">
+        {% csrf_token %}
+        <p class="sup"><button class="sup" type="submit" style="background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer"> Supprimer le panier</button></p>
+    </form>
 
     {% for order in orders %}
     <h2 class="name">{{order.product.name}}</h2>

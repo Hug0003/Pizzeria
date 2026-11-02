@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 from resto.models import Product, Cart, Order
 from django.http import HttpResponse
 from django.core import serializers
@@ -13,6 +15,7 @@ def index(request):
     products =Product.objects.all()
     return render(request, 'resto/index.html', context={"products": products})
 
+@login_required
 def add_to_cart(request, slug):
     user = request.user
     product = get_object_or_404(Product, slug=slug)
@@ -28,16 +31,18 @@ def add_to_cart(request, slug):
     return redirect(reverse("product", kwargs={"slug":slug}))
 
 
+@login_required
 def cart(request):
-    cart = get_object_or_404(Cart, user=request.user)
-    return render(request, 'resto/cart.html', context={"orders":cart.orders.all()})
+    cart = Cart.objects.filter(user=request.user).first()
+    orders = cart.orders.all() if cart else []
+    return render(request, 'resto/cart.html', context={"orders": orders})
 
 
+# POST uniquement : un simple lien piégé (GET) ne peut pas vider le panier.
+@login_required
+@require_POST
 def delete_cart(request):
-    cart = request.user.cart
-    if cart:
-        cart.delete()
-    
+    Cart.objects.filter(user=request.user).delete()
     return redirect('index')
 
 

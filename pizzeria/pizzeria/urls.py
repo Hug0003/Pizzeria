@@ -1,4 +1,4 @@
-
+import os
 from django.contrib import admin
 from django.urls import path
 from resto .views import index, add_to_cart, cart, delete_cart, api_get_plats , alcool, cafe, charcuterie, d_sale, d_sucre, non_alcool, lasagne, pizza, pate, salade, sale, soda, sucre, the
@@ -25,7 +25,8 @@ urlpatterns = [
     path('the/', the ,name="the"),
 
 
-    path('admin/', admin.site.urls),
+    # Adresse de l'admin non devinable en production (variable DJANGO_ADMIN_PATH).
+    path(os.environ.get("DJANGO_ADMIN_PATH") or "admin/", admin.site.urls),
     path('signup/', signup, name="signup"),
     path('logout/', logout_user, name="logout"),
     path('login/', login_user, name="login"),
